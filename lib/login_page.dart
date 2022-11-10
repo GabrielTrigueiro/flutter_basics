@@ -53,8 +53,8 @@ class _loginPageState extends State<loginPage> {
                   SizedBox(height:20),
                   TextButton(onPressed: (() {
                     if (email == 'gabriel@gmail.com' && senha == '123') {
-                      //adiciona uma pagina a cima do array de paginas do contexto
-                      Navigator.of(context).push(
+                      //simplesmente mata a página antiga e fica a nova
+                      Navigator.of(context).pushReplacement(
                         MaterialPageRoute(builder: (context) => HomePage())
                       );
                     } else {
