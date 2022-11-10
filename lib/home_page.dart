@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_app/app_theme_controler.dart';
 
+//flutter debug paint pra ver as áreas dos widget no emulador
+
 class HomePage extends StatefulWidget {
 
   @override
@@ -21,8 +23,18 @@ class HomePageState extends State<HomePage>{
           title: Text('Home Page'),
           actions: [customSwitch()],
         ),
-        body: Center(
-          child: customSwitch(),
+        body: Container(
+          //double infinity para max de altura ou largura
+          width: double.infinity,
+          height: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,//centraliza x e y em relação aos widgets pais
+            //crossAxisAlignment: CrossAxisAlignment.start,//onde o widget inicia
+            children: [
+              Text('Contador: $counter'),
+              customSwitch(),
+            ]
+          ),
         ),
         floatingActionButton:
           FloatingActionButton(
