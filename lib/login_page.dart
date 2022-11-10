@@ -12,10 +12,8 @@ class _loginPageState extends State<loginPage> {
   String email = '';
   String senha = '';
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+  Widget _body(){
+    return SingleChildScrollView(
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
@@ -59,7 +57,22 @@ class _loginPageState extends State<loginPage> {
                 ]),
           ),
         ),
-      ),
+      );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(children: [
+        Container(
+          color: Colors.red,
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: Image.asset('assets/images/wallpaper.jpg', fit: BoxFit.cover,)
+          ),),
+          Container(color: Colors.black.withOpacity(0.3)),//opacidade
+        _body()
+      ]),
     );
   }
 }
