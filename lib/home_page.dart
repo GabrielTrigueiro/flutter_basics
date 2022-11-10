@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_app/app_theme_controler.dart';
 
 class HomePage extends StatefulWidget {
 
@@ -20,16 +21,12 @@ class HomePageState extends State<HomePage>{
           title: Text('Home Page'),
         ),
         body: Center(
-          child: GestureDetector(
-            child: Text(
-              'Contador : $counter',
-              style: TextStyle(fontSize: 20.00),  
-            ),
-            onTap: () {
-              setState(() {
-                counter++;
-              });
-            }),
+          child: Switch(
+            value: appThemeControler.instance.themeSwitch,       //usando a const controladora criada
+            onChanged: (value){
+              appThemeControler.instance.changeTheme();          //usando a função de manipulação criada
+            },
+          ),
         ),
         floatingActionButton:
           FloatingActionButton(
