@@ -27,6 +27,7 @@ class _loginPageState extends State<loginPage> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Container(width: 200, height: 200,child: Image.network('https://www.citypng.com/public/uploads/preview/-21602265961pdgsabgogw.png')),
                   TextField(
                     onChanged: (text) {
                       print(text);
