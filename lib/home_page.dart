@@ -28,11 +28,32 @@ class HomePageState extends State<HomePage>{
           width: double.infinity,
           height: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,//centraliza x e y em relação aos widgets pais
-            //crossAxisAlignment: CrossAxisAlignment.start,//onde o widget inicia
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Contador: $counter'),
+              Container(height: 10,),
               customSwitch(),
+              Container(height: 50,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.amber[50],
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.amber[100],
+                  ),
+                  Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.amber[200],
+                  ),
+                ],
+              )
             ]
           ),
         ),
