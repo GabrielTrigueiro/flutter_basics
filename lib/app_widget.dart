@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_app/app_theme_controler.dart';
+import 'package:material_app/home_page.dart';
 import 'package:material_app/login_page.dart';
 
 //import 'home_page.dart';
@@ -17,7 +18,11 @@ class AppWidget extends StatelessWidget {
               primarySwatch: Colors.red,
               brightness: appThemeControler.instance.themeSwitch ? Brightness.light : Brightness.dark //regra do tema
             ),
-            home: loginPage(),
+            initialRoute: '/',
+            routes: {
+              '/':(context) => loginPage(),
+              '/home':(context) => HomePage(),
+            },
           );
       },
     );

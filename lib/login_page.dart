@@ -53,10 +53,7 @@ class _loginPageState extends State<loginPage> {
                   SizedBox(height:20),
                   TextButton(onPressed: (() {
                     if (email == 'gabriel@gmail.com' && senha == '123') {
-                      //simplesmente mata a página antiga e fica a nova
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => HomePage())
-                      );
+                      Navigator.of(context).pushReplacementNamed('/home');//pushNames para poder voltar
                     } else {
                       print('dados inválidos');
                     }
