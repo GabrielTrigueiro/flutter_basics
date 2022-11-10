@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:material_app/home_page.dart';
 
 class loginPage extends StatefulWidget {
   const loginPage({super.key});
@@ -27,7 +24,7 @@ class _loginPageState extends State<loginPage> {
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(width: 200, height: 200,child: Image.network('https://www.citypng.com/public/uploads/preview/-21602265961pdgsabgogw.png')),
+                  Container(width: 200, height: 200,child: Image.asset('assets/images/Genshin-Impact-Logo.png')),
                   TextField(
                     onChanged: (text) {
                       print(text);
