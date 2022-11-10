@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:material_app/home_page.dart';
 
 class loginPage extends StatefulWidget {
   const loginPage({super.key});
@@ -50,7 +51,16 @@ class _loginPageState extends State<loginPage> {
                     ),
                   ),
                   SizedBox(height:20),
-                  TextButton(onPressed: (() {print('Email: $email\nSenha: $senha');}), child: Text('Entrar'))
+                  TextButton(onPressed: (() {
+                    if (email == 'gabriel@gmail.com' && senha == '123') {
+                      //adiciona uma pagina a cima do array de paginas do contexto
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomePage())
+                      );
+                    } else {
+                      print('dados inválidos');
+                    }
+                  }), child: Text('Entrar'))
                 ]),
           ),
         ),
