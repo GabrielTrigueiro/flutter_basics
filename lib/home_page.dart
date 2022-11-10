@@ -19,14 +19,10 @@ class HomePageState extends State<HomePage>{
       Scaffold(
         appBar: AppBar(
           title: Text('Home Page'),
+          actions: [customSwitch()],
         ),
         body: Center(
-          child: Switch(
-            value: appThemeControler.instance.themeSwitch,       //usando a const controladora criada
-            onChanged: (value){
-              appThemeControler.instance.changeTheme();          //usando a função de manipulação criada
-            },
-          ),
+          child: customSwitch(),
         ),
         floatingActionButton:
           FloatingActionButton(
@@ -38,5 +34,18 @@ class HomePageState extends State<HomePage>{
           },
         ),
       );
+  }
+}
+
+//componentizando um switch
+class customSwitch extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Switch(
+      value: appThemeControler.instance.themeSwitch,       //usando a const controladora criada
+      onChanged: (value){
+        appThemeControler.instance.changeTheme();          //usando a função de manipulação criada
+      },
+    );
   }
 }
