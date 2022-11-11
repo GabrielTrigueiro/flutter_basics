@@ -22,7 +22,7 @@ class HomePageState extends State<HomePage> {
           UserAccountsDrawerHeader(
             accountName: Text('Gabriel Trigueiro'),
             accountEmail: Text('gabriel@gmail.com'),
-            currentAccountPicture: Image.network('https://assets.reedpopcdn.com/Genshin-Impact-Nahida.jpg/BROK/resize/414%3E/format/jpg/quality/70/Genshin-Impact-Nahida.jpg', fit: BoxFit.fitWidth),
+            currentAccountPicture: ClipRRect(borderRadius: BorderRadius.circular(40.0),child: Image.network('https://assets.reedpopcdn.com/Genshin-Impact-Nahida.jpg/BROK/resize/414%3E/format/jpg/quality/70/Genshin-Impact-Nahida.jpg', fit: BoxFit.fitWidth)),
           ),
           ListTile(title: Text('opção 1'), subtitle: Text('subtitulo'),leading: Icon(Icons.home), onTap: () => print('opção 1'),),
           ListTile(title: Text('opção 2'),),
