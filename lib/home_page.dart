@@ -19,7 +19,11 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: Drawer(
         child: Column(children: [
-          ListTile(),
+          UserAccountsDrawerHeader(
+            accountName: Text('Gabriel Trigueiro'),
+            accountEmail: Text('gabriel@gmail.com'),
+            currentAccountPicture: Image.network('https://assets.reedpopcdn.com/Genshin-Impact-Nahida.jpg/BROK/resize/414%3E/format/jpg/quality/70/Genshin-Impact-Nahida.jpg', fit: BoxFit.fitWidth),
+          ),
           ListTile(title: Text('opção 1'), subtitle: Text('subtitulo'),leading: Icon(Icons.home), onTap: () => print('opção 1'),),
           ListTile(title: Text('opção 2'),),
           ListTile(title: Text('opção 3'),),
